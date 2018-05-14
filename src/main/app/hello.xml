@@ -10,6 +10,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
     <http:listener-config name="HTTP_Listener_Configuration1" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration"/>
     <flow name="helloFlow">
         <http:listener config-ref="HTTP_Listener_Configuration1" path="/hello" doc:name="HTTP"/>
+        <logger message="track the info" level="INFO" doc:name="Logger"/>
         <set-payload value="Name:sudheer
 id:12345
 " doc:name="Set Payload"/>
